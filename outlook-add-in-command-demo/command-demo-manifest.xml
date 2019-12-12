@@ -34,7 +34,6 @@
       </DesktopSettings>
       <PhoneSettings>
         <SourceLocation DefaultValue="https://dlowder-salesforce.github.io/outlook-add-in-command-demo/AllPropsView/AllProps.html"/>
-        <RequestedHeight>450</RequestedHeight>
       </PhoneSettings>
     </Form>
     <Form xsi:type="ItemEdit">
