@@ -29,11 +29,11 @@
         <!-- NOTE: Just reusing the read taskpane page that is invoked by the button
              on the ribbon in clients that support add-in commands. You can
              use a completely different page if desired -->
-        <SourceLocation DefaultValue="https://mailapp.stmpa.stm.force.com/clients/mailapp/activation?bypassDomainValidation=true"/>
+        <SourceLocation DefaultValue="https://dlowder-salesforce.github.io/outlook-add-in-command-demo/AllPropsView/AllProps.html"/>
         <RequestedHeight>450</RequestedHeight>
       </DesktopSettings>
       <PhoneSettings>
-        <SourceLocation DefaultValue="https://mailapp.stmpa.stm.force.com/clients/mailapp/activation?bypassDomainValidation=true"/>
+        <SourceLocation DefaultValue="https://dlowder-salesforce.github.io/outlook-add-in-command-demo/AllPropsView/AllProps.html"/>
       </PhoneSettings>
     </Form>
     <Form xsi:type="ItemEdit">
@@ -489,8 +489,8 @@
       </bt:Images>
       <bt:Urls>
         <bt:Url id="functionFile" DefaultValue="https://dlowder-salesforce.github.io/outlook-add-in-command-demo/FunctionFile/Functions.html"/>
-        <bt:Url id="readTaskPaneUrl" DefaultValue="https://mailapp.stmpa.stm.force.com/clients/mailapp/activation?bypassDomainValidation=true"/>
-        <bt:Url id="composeTaskPaneUrl" DefaultValue="https://mailapp.stmpa.stm.force.com/clients/mailapp/activation?bypassDomainValidation=true"/>
+        <bt:Url id="readTaskPaneUrl" DefaultValue="https://dlowder-salesforce.github.io/outlook-add-in-command-demo/AllPropsView/AllProps.html"/>
+        <bt:Url id="composeTaskPaneUrl" DefaultValue="https://dlowder-salesforce.github.io/outlook-add-in-command-demo/InsertTextPane/InsertText.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue="Add-in Demo"/>
@@ -838,6 +838,23 @@
                       </Item>
                     </Items>
                   </Control>
+                  <!-- Task pane button -->
+                  <Control xsi:type="Button" id="msgReadOpenPaneButton">
+                    <Label resid="paneReadButtonLabel" />
+                    <Supertip>
+                      <Title resid="paneReadSuperTipTitle" />
+                      <Description resid="paneReadSuperTipDescription" />
+                    </Supertip>
+                    <Icon>
+                      <bt:Image size="16" resid="green-icon-16" />
+                      <bt:Image size="32" resid="green-icon-32" />
+                      <bt:Image size="80" resid="green-icon-80" />
+                    </Icon>
+                    <Action xsi:type="ShowTaskpane">
+                      <SourceLocation resid="readTaskPaneUrl" />
+                      <SupportsPinning>true</SupportsPinning>
+                    </Action>
+                  </Control>
 
                   <Control xsi:type="Button" id="msgReadRestPaneButton">
                     <Label resid="restpaneReadButtonLabel" />
@@ -851,7 +868,7 @@
                       <bt:Image size="80" resid="green-icon-80" />
                     </Icon>
                     <Action xsi:type="ShowTaskpane">
-                      <SourceLocation resid="restMobileTaskPaneUrl" />
+                      <SourceLocation resid="restTaskPaneUrl" />
                     </Action>
                   </Control>
                 </Group>
@@ -967,8 +984,8 @@
             <ExtensionPoint xsi:type="MobileMessageReadCommandSurface">
               <Group id="mobileMsgRead">
                 <Label resid="groupLabel" />
-                <Control xsi:type="MobileButton" id="mblRestPaneButton">
-                  <Label resid="restpaneReadButtonLabel" />
+                <Control xsi:type="MobileButton" id="mblReadFunctionButton">
+                  <Label resid="funcReadButtonLabel" />
                   <Icon xsi:type="bt:MobileIconList">
                     <bt:Image size="25" scale="1" resid="blue-icon-32" />
                     <bt:Image size="25" scale="2" resid="blue-icon-32" />
@@ -981,6 +998,44 @@
                     <bt:Image size="48" scale="1" resid="blue-icon-32" />
                     <bt:Image size="48" scale="2" resid="blue-icon-32" />
                     <bt:Image size="48" scale="3" resid="blue-icon-32" />
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>getSubject</FunctionName>
+                  </Action>
+                </Control>
+                <Control xsi:type="MobileButton" id="mblTaskPane">
+                  <Label resid="paneReadButtonLabel" />
+                  <Icon xsi:type="bt:MobileIconList">
+                    <bt:Image size="25" scale="1" resid="green-icon-32" />
+                    <bt:Image size="25" scale="2" resid="green-icon-32" />
+                    <bt:Image size="25" scale="3" resid="green-icon-32" />
+
+                    <bt:Image size="32" scale="1" resid="green-icon-32" />
+                    <bt:Image size="32" scale="2" resid="green-icon-32" />
+                    <bt:Image size="32" scale="3" resid="green-icon-32" />
+
+                    <bt:Image size="48" scale="1" resid="green-icon-32" />
+                    <bt:Image size="48" scale="2" resid="green-icon-32" />
+                    <bt:Image size="48" scale="3" resid="green-icon-32" />
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <SourceLocation resid="readTaskPaneUrl" />
+                  </Action>
+                </Control>
+                <Control xsi:type="MobileButton" id="mblRestPaneButton">
+                  <Label resid="restpaneReadButtonLabel" />
+                  <Icon xsi:type="bt:MobileIconList">
+                    <bt:Image size="25" scale="1" resid="green-icon-32" />
+                    <bt:Image size="25" scale="2" resid="green-icon-32" />
+                    <bt:Image size="25" scale="3" resid="green-icon-32" />
+
+                    <bt:Image size="32" scale="1" resid="green-icon-32" />
+                    <bt:Image size="32" scale="2" resid="green-icon-32" />
+                    <bt:Image size="32" scale="3" resid="green-icon-32" />
+
+                    <bt:Image size="48" scale="1" resid="green-icon-32" />
+                    <bt:Image size="48" scale="2" resid="green-icon-32" />
+                    <bt:Image size="48" scale="3" resid="green-icon-32" />
                   </Icon>
                   <Action xsi:type="ShowTaskpane">
                     <SourceLocation resid="restMobileTaskPaneUrl" />
@@ -1009,10 +1064,10 @@
         </bt:Images>
         <bt:Urls>
           <bt:Url id="functionFile" DefaultValue="https://dlowder-salesforce.github.io/outlook-add-in-command-demo/FunctionFile/Functions.html"/>
-          <bt:Url id="readTaskPaneUrl" DefaultValue="https://mailapp.stmpa.stm.force.com/clients/mailapp/activation?bypassDomainValidation=true"/>
-          <bt:Url id="composeTaskPaneUrl" DefaultValue="https://mailapp.stmpa.stm.force.com/clients/mailapp/activation?bypassDomainValidation=true"/>
-          <bt:Url id="restTaskPaneUrl" DefaultValue="https://mailapp.stmpa.stm.force.com/clients/mailapp/activation?bypassDomainValidation=true"/>
-          <bt:Url id="restMobileTaskPaneUrl" DefaultValue="https://mailapp.stmpa.stm.force.com/clients/mailapp/activation?bypassDomainValidation=true"/>
+          <bt:Url id="readTaskPaneUrl" DefaultValue="https://dlowder-salesforce.github.io/outlook-add-in-command-demo/AllPropsView/AllProps.html"/>
+          <bt:Url id="composeTaskPaneUrl" DefaultValue="https://dlowder-salesforce.github.io/outlook-add-in-command-demo/InsertTextPane/InsertText.html"/>
+          <bt:Url id="restTaskPaneUrl" DefaultValue="https://dlowder-salesforce.github.io/outlook-add-in-command-demo/RestCaller/RestCaller.html"/>
+          <bt:Url id="restMobileTaskPaneUrl" DefaultValue="https://dlowder-salesforce.github.io/outlook-add-in-command-demo/RestCaller/mobile/RestCallerMobile.html"/>
         </bt:Urls>
         <bt:ShortStrings>
           <bt:String id="groupLabel" DefaultValue="Add-in Demo"/>
@@ -1033,7 +1088,7 @@
           <bt:String id="funcReadButtonLabel" DefaultValue="Get subject"/>
           <bt:String id="menuReadButtonLabel" DefaultValue="Get property"/>
           <bt:String id="paneReadButtonLabel" DefaultValue="Display all properties"/>
-          <bt:String id="restpaneReadButtonLabel" DefaultValue="STMPA test"/>
+          <bt:String id="restpaneReadButtonLabel" DefaultValue="Test REST Calls"/>
 
           <bt:String id="funcReadSuperTipTitle" DefaultValue="Gets the subject of the message or appointment"/>
           <bt:String id="menuReadSuperTipTitle" DefaultValue="Choose a property to get"/>
