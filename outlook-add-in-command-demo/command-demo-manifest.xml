@@ -838,23 +838,6 @@
                       </Item>
                     </Items>
                   </Control>
-                  <!-- Task pane button -->
-                  <Control xsi:type="Button" id="msgReadOpenPaneButton">
-                    <Label resid="paneReadButtonLabel" />
-                    <Supertip>
-                      <Title resid="paneReadSuperTipTitle" />
-                      <Description resid="paneReadSuperTipDescription" />
-                    </Supertip>
-                    <Icon>
-                      <bt:Image size="16" resid="green-icon-16" />
-                      <bt:Image size="32" resid="green-icon-32" />
-                      <bt:Image size="80" resid="green-icon-80" />
-                    </Icon>
-                    <Action xsi:type="ShowTaskpane">
-                      <SourceLocation resid="readTaskPaneUrl" />
-                      <SupportsPinning>true</SupportsPinning>
-                    </Action>
-                  </Control>
 
                   <Control xsi:type="Button" id="msgReadRestPaneButton">
                     <Label resid="restpaneReadButtonLabel" />
@@ -868,7 +851,7 @@
                       <bt:Image size="80" resid="green-icon-80" />
                     </Icon>
                     <Action xsi:type="ShowTaskpane">
-                      <SourceLocation resid="restTaskPaneUrl" />
+                      <SourceLocation resid="restMobileTaskPaneUrl" />
                     </Action>
                   </Control>
                 </Group>
@@ -984,44 +967,6 @@
             <ExtensionPoint xsi:type="MobileMessageReadCommandSurface">
               <Group id="mobileMsgRead">
                 <Label resid="groupLabel" />
-                <Control xsi:type="MobileButton" id="mblReadFunctionButton">
-                  <Label resid="funcReadButtonLabel" />
-                  <Icon xsi:type="bt:MobileIconList">
-                    <bt:Image size="25" scale="1" resid="blue-icon-32" />
-                    <bt:Image size="25" scale="2" resid="blue-icon-32" />
-                    <bt:Image size="25" scale="3" resid="blue-icon-32" />
-
-                    <bt:Image size="32" scale="1" resid="blue-icon-32" />
-                    <bt:Image size="32" scale="2" resid="blue-icon-32" />
-                    <bt:Image size="32" scale="3" resid="blue-icon-32" />
-
-                    <bt:Image size="48" scale="1" resid="blue-icon-32" />
-                    <bt:Image size="48" scale="2" resid="blue-icon-32" />
-                    <bt:Image size="48" scale="3" resid="blue-icon-32" />
-                  </Icon>
-                  <Action xsi:type="ExecuteFunction">
-                    <FunctionName>getSubject</FunctionName>
-                  </Action>
-                </Control>
-                <Control xsi:type="MobileButton" id="mblTaskPane">
-                  <Label resid="paneReadButtonLabel" />
-                  <Icon xsi:type="bt:MobileIconList">
-                    <bt:Image size="25" scale="1" resid="green-icon-32" />
-                    <bt:Image size="25" scale="2" resid="green-icon-32" />
-                    <bt:Image size="25" scale="3" resid="green-icon-32" />
-
-                    <bt:Image size="32" scale="1" resid="green-icon-32" />
-                    <bt:Image size="32" scale="2" resid="green-icon-32" />
-                    <bt:Image size="32" scale="3" resid="green-icon-32" />
-
-                    <bt:Image size="48" scale="1" resid="green-icon-32" />
-                    <bt:Image size="48" scale="2" resid="green-icon-32" />
-                    <bt:Image size="48" scale="3" resid="green-icon-32" />
-                  </Icon>
-                  <Action xsi:type="ShowTaskpane">
-                    <SourceLocation resid="readTaskPaneUrl" />
-                  </Action>
-                </Control>
                 <Control xsi:type="MobileButton" id="mblRestPaneButton">
                   <Label resid="restpaneReadButtonLabel" />
                   <Icon xsi:type="bt:MobileIconList">
