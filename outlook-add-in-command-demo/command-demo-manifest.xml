@@ -970,17 +970,17 @@
                 <Control xsi:type="MobileButton" id="mblRestPaneButton">
                   <Label resid="restpaneReadButtonLabel" />
                   <Icon xsi:type="bt:MobileIconList">
-                    <bt:Image size="25" scale="1" resid="green-icon-32" />
-                    <bt:Image size="25" scale="2" resid="green-icon-32" />
-                    <bt:Image size="25" scale="3" resid="green-icon-32" />
+                    <bt:Image size="25" scale="1" resid="blue-icon-32" />
+                    <bt:Image size="25" scale="2" resid="blue-icon-32" />
+                    <bt:Image size="25" scale="3" resid="blue-icon-32" />
 
-                    <bt:Image size="32" scale="1" resid="green-icon-32" />
-                    <bt:Image size="32" scale="2" resid="green-icon-32" />
-                    <bt:Image size="32" scale="3" resid="green-icon-32" />
+                    <bt:Image size="32" scale="1" resid="blue-icon-32" />
+                    <bt:Image size="32" scale="2" resid="blue-icon-32" />
+                    <bt:Image size="32" scale="3" resid="blue-icon-32" />
 
-                    <bt:Image size="48" scale="1" resid="green-icon-32" />
-                    <bt:Image size="48" scale="2" resid="green-icon-32" />
-                    <bt:Image size="48" scale="3" resid="green-icon-32" />
+                    <bt:Image size="48" scale="1" resid="blue-icon-32" />
+                    <bt:Image size="48" scale="2" resid="blue-icon-32" />
+                    <bt:Image size="48" scale="3" resid="blue-icon-32" />
                   </Icon>
                   <Action xsi:type="ShowTaskpane">
                     <SourceLocation resid="restMobileTaskPaneUrl" />
