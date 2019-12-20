@@ -1036,7 +1036,7 @@
           <bt:String id="funcReadButtonLabel" DefaultValue="Get subject"/>
           <bt:String id="menuReadButtonLabel" DefaultValue="Get property"/>
           <bt:String id="paneReadButtonLabel" DefaultValue="Display all properties"/>
-          <bt:String id="restpaneReadButtonLabel" DefaultValue="Test REST Calls"/>
+          <bt:String id="restpaneReadButtonLabel" DefaultValue="STMPA test"/>
 
           <bt:String id="funcReadSuperTipTitle" DefaultValue="Gets the subject of the message or appointment"/>
           <bt:String id="menuReadSuperTipTitle" DefaultValue="Choose a property to get"/>
