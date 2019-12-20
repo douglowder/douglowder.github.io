@@ -17,6 +17,14 @@
   <Hosts>
     <Host Name="Mailbox" />
   </Hosts>
+  <AppDomains>
+    <!--  mailapp domains  -->
+    <AppDomain>https://mailapp.stmpa.stm.force.com</AppDomain>
+    <AppDomain>https://test-mailapp.stmpa.stm.force.com</AppDomain>
+    <!--  o365 oauth domains  -->
+    <AppDomain>https://login.microsoftonline.com</AppDomain>
+    <AppDomain>https://login.windows.net</AppDomain>
+  </AppDomains>
   <Requirements>
     <Sets>
       <Set Name="MailBox" MinVersion="1.1" />
