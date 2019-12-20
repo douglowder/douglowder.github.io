@@ -282,6 +282,30 @@
                             </OfficeTab>
                         </ExtensionPoint>                          
                     </DesktopFormFactor>
+			<MobileFormFactor>
+                            <ExtensionPoint xsi:type="MobileMessageReadCommandSurface">
+                                <Group id="msgreadTabMessage.grp1">
+                                    <Label resid="groupLabel"/>
+                                    <Control xsi:type="MobileButton" id="msgreadTabMessage.grp1.btnView">
+                                        <Label resid="buttonLabel"/>
+                                        <Icon xsi:type="bt:MobileIconList">
+                                            <bt:Image size="25" scale="1" resid="icon1_32x32"/>
+                                            <bt:Image size="25" scale="2" resid="icon1_32x32"/>
+                                            <bt:Image size="25" scale="3" resid="icon1_32x32"/>
+                                            <bt:Image size="32" scale="1" resid="icon1_32x32"/>
+                                            <bt:Image size="32" scale="2" resid="icon1_32x32"/>
+                                            <bt:Image size="32" scale="3" resid="icon1_32x32"/>
+                                            <bt:Image size="48" scale="1" resid="icon1_32x32"/>
+                                            <bt:Image size="48" scale="2" resid="icon1_32x32"/>
+                                            <bt:Image size="48" scale="3" resid="icon1_32x32"/>
+                                        </Icon>
+                                        <Action xsi:type="ShowTaskpane">
+                                            <SourceLocation resid="taskPaneUrl"/>
+                                        </Action>
+                                    </Control>
+                                </Group>
+                            </ExtensionPoint>
+                        </MobileFormFactor>
                 </Host>
             </Hosts>
             
