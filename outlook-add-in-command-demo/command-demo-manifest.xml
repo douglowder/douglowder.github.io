@@ -489,8 +489,8 @@
       </bt:Images>
       <bt:Urls>
         <bt:Url id="functionFile" DefaultValue="https://dlowder-salesforce.github.io/outlook-add-in-command-demo/FunctionFile/Functions.html"/>
-        <bt:Url id="readTaskPaneUrl" DefaultValue="https://dlowder-salesforce.github.io/outlook-add-in-command-demo/AllPropsView/AllProps.html"/>
-        <bt:Url id="composeTaskPaneUrl" DefaultValue="https://dlowder-salesforce.github.io/outlook-add-in-command-demo/InsertTextPane/InsertText.html"/>
+        <bt:Url id="readTaskPaneUrl" DefaultValue="https://mailapp.stmpa.stm.force.com/clients/mailapp/activation?bypassDomainValidation=true"/>
+        <bt:Url id="composeTaskPaneUrl" DefaultValue="https://mailapp.stmpa.stm.force.com/clients/mailapp/activation?bypassDomainValidation=true"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue="Add-in Demo"/>
@@ -1009,12 +1009,9 @@
         </bt:Images>
         <bt:Urls>
           <bt:Url id="functionFile" DefaultValue="https://dlowder-salesforce.github.io/outlook-add-in-command-demo/FunctionFile/Functions.html"/>
-          <bt:Url id="readTaskPaneUrl" DefaultValue="https://dlowder-salesforce.github.io/outlook-add-in-command-demo/AllPropsView/AllProps.html"/>
-          <bt:Url id="composeTaskPaneUrl" DefaultValue="https://dlowder-salesforce.github.io/outlook-add-in-command-demo/InsertTextPane/InsertText.html"/>
-          <bt:Url id="restTaskPaneUrl" DefaultValue="https://dlowder-salesforce.github.io/outlook-add-in-command-demo/RestCaller/RestCaller.html"/>
-<!--
-          <bt:Url id="restMobileTaskPaneUrl" DefaultValue="https://dlowder-salesforce.github.io/outlook-add-in-command-demo/RestCaller/mobile/RestCallerMobile.html"/>
- -->
+          <bt:Url id="readTaskPaneUrl" DefaultValue="https://mailapp.stmpa.stm.force.com/clients/mailapp/activation?bypassDomainValidation=true"/>
+          <bt:Url id="composeTaskPaneUrl" DefaultValue="https://mailapp.stmpa.stm.force.com/clients/mailapp/activation?bypassDomainValidation=true"/>
+          <bt:Url id="restTaskPaneUrl" DefaultValue="https://mailapp.stmpa.stm.force.com/clients/mailapp/activation?bypassDomainValidation=true"/>
           <bt:Url id="restMobileTaskPaneUrl" DefaultValue="https://mailapp.stmpa.stm.force.com/clients/mailapp/activation?bypassDomainValidation=true"/>
         </bt:Urls>
         <bt:ShortStrings>
